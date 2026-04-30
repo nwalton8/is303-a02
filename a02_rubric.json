@@ -1,0 +1,353 @@
+{
+  "assignment": "A02",
+  "description": "Decisions",
+  "total_points": 65,
+  "problem_naming": {
+    "Fitness Advisor": ["fitness_advisor.py", "fitness.py", "advisor.py", "fitnessadvisor.py", "fitness_plan.py"],
+    "Quest Recommender": ["quest_recommender.py", "quest.py", "recommender.py", "questrecommender.py", "gaming.py"],
+    "Access Checker": ["access_checker.py", "access.py", "checker.py", "accesschecker.py", "security.py"],
+    "Color Mixer": ["color_mixer.py", "color.py", "mixer.py", "colormixer.py", "art.py"],
+    "Lab Safety Checker": ["lab_safety.py", "lab.py", "safety.py", "labsafety.py", "lab_safety_checker.py", "science.py"],
+    "Survey Classifier": ["survey_classifier.py", "survey.py", "classifier.py", "surveyclassifier.py", "analytics.py", "nps.py"],
+    "Shipping Calculator": ["shipping_calculator.py", "shipping.py", "shippingcalculator.py", "shipping_calc.py", "business.py"],
+    "Meal Recommender": ["meal_recommender.py", "meal.py", "mealrecommender.py", "meal_planner.py", "food.py"]
+  },
+  "problem_rubrics": {
+    "Fitness Advisor": {
+      "content_checks": [
+        {
+          "field": "I/P/O comment block",
+          "regexes": [
+            "'''[\\s\\S]*inputs[\\s\\S]*processes[\\s\\S]*outputs[\\s\\S]*'''",
+            "\"\"\"[\\s\\S]*inputs[\\s\\S]*processes[\\s\\S]*outputs[\\s\\S]*\"\"\""
+          ],
+          "points": 3
+        }
+      ],
+      "test_cases": [
+        {
+          "label": "beginner + weight loss",
+          "inputs": "Alex\nbeginner\nweight loss\n1\n1\n1\n",
+          "expected_output": ".+",
+          "points": 2,
+          "type": "branch"
+        },
+        {
+          "label": "advanced + strength",
+          "inputs": "Alex\nadvanced\nstrength\n1\n1\n1\n",
+          "expected_output": ".+",
+          "points": 2,
+          "type": "branch"
+        },
+        {
+          "label": "intermediate + endurance",
+          "inputs": "Alex\nintermediate\nendurance\n1\n1\n1\n",
+          "expected_output": ".+",
+          "points": 2,
+          "type": "branch"
+        },
+        {
+          "label": "invalid fitness level",
+          "inputs": "Alex\nexpert\nstrength\n1\n1\n1\n",
+          "expected_output": "error|invalid|not.*valid|unrecognized|choose|must",
+          "points": 2,
+          "type": "validation"
+        }
+      ]
+    },
+    "Quest Recommender": {
+      "content_checks": [
+        {
+          "field": "I/P/O comment block",
+          "regexes": [
+            "'''[\\s\\S]*inputs[\\s\\S]*processes[\\s\\S]*outputs[\\s\\S]*'''",
+            "\"\"\"[\\s\\S]*inputs[\\s\\S]*processes[\\s\\S]*outputs[\\s\\S]*\"\"\""
+          ],
+          "points": 3
+        }
+      ],
+      "test_cases": [
+        {
+          "label": "low level warrior (1-10)",
+          "inputs": "Aria\n5\nwarrior\n1\n1\n1\n",
+          "expected_output": ".+",
+          "points": 2,
+          "type": "branch"
+        },
+        {
+          "label": "high level mage (26+)",
+          "inputs": "Aria\n30\nmage\n1\n1\n1\n",
+          "expected_output": ".+",
+          "points": 2,
+          "type": "branch"
+        },
+        {
+          "label": "mid level rogue (11-25)",
+          "inputs": "Aria\n15\nrogue\n1\n1\n1\n",
+          "expected_output": ".+",
+          "points": 2,
+          "type": "branch"
+        },
+        {
+          "label": "non-numeric level",
+          "inputs": "Aria\nabc\nwarrior\n1\n1\n1\n",
+          "expected_output": "error|invalid|number|digit|must|enter.*valid|not.*number",
+          "points": 2,
+          "type": "validation"
+        }
+      ]
+    },
+    "Access Checker": {
+      "content_checks": [
+        {
+          "field": "I/P/O comment block",
+          "regexes": [
+            "'''[\\s\\S]*inputs[\\s\\S]*processes[\\s\\S]*outputs[\\s\\S]*'''",
+            "\"\"\"[\\s\\S]*inputs[\\s\\S]*processes[\\s\\S]*outputs[\\s\\S]*\"\"\""
+          ],
+          "points": 3
+        }
+      ],
+      "test_cases": [
+        {
+          "label": "admin with elevated clearance",
+          "inputs": "admin\nelevated\n1\n1\n1\n1\n",
+          "expected_output": ".+",
+          "points": 2,
+          "type": "branch"
+        },
+        {
+          "label": "visitor with standard clearance",
+          "inputs": "visitor\nstandard\n1\n1\n1\n1\n",
+          "expected_output": ".+",
+          "points": 2,
+          "type": "branch"
+        },
+        {
+          "label": "employee with standard clearance",
+          "inputs": "employee\nstandard\n1\n1\n1\n1\n",
+          "expected_output": ".+",
+          "points": 2,
+          "type": "branch"
+        },
+        {
+          "label": "invalid role",
+          "inputs": "hacker\nstandard\n1\n1\n1\n1\n",
+          "expected_output": "error|invalid|not.*valid|unrecognized|denied|unknown",
+          "points": 2,
+          "type": "validation"
+        }
+      ]
+    },
+    "Color Mixer": {
+      "content_checks": [
+        {
+          "field": "I/P/O comment block",
+          "regexes": [
+            "'''[\\s\\S]*inputs[\\s\\S]*processes[\\s\\S]*outputs[\\s\\S]*'''",
+            "\"\"\"[\\s\\S]*inputs[\\s\\S]*processes[\\s\\S]*outputs[\\s\\S]*\"\"\""
+          ],
+          "points": 3
+        }
+      ],
+      "test_cases": [
+        {
+          "label": "red + blue = purple",
+          "inputs": "red\nblue\n1\n1\n1\n1\n",
+          "expected_output": "purple",
+          "points": 2,
+          "type": "branch"
+        },
+        {
+          "label": "red + yellow = orange",
+          "inputs": "red\nyellow\n1\n1\n1\n1\n",
+          "expected_output": "orange",
+          "points": 2,
+          "type": "branch"
+        },
+        {
+          "label": "blue + yellow = green",
+          "inputs": "blue\nyellow\n1\n1\n1\n1\n",
+          "expected_output": "green",
+          "points": 2,
+          "type": "branch"
+        },
+        {
+          "label": "invalid color (pink)",
+          "inputs": "pink\nblue\n1\n1\n1\n1\n",
+          "expected_output": "error|invalid|not.*valid|unrecognized|not.*primary",
+          "points": 2,
+          "type": "validation"
+        }
+      ]
+    },
+    "Lab Safety Checker": {
+      "content_checks": [
+        {
+          "field": "I/P/O comment block",
+          "regexes": [
+            "'''[\\s\\S]*inputs[\\s\\S]*processes[\\s\\S]*outputs[\\s\\S]*'''",
+            "\"\"\"[\\s\\S]*inputs[\\s\\S]*processes[\\s\\S]*outputs[\\s\\S]*\"\"\""
+          ],
+          "points": 3
+        }
+      ],
+      "test_cases": [
+        {
+          "label": "room temperature, low pressure",
+          "inputs": "acid\n25\n1\n1\n1\n1\n",
+          "expected_output": ".+",
+          "points": 2,
+          "type": "branch"
+        },
+        {
+          "label": "extreme temperature, high pressure",
+          "inputs": "acid\n500\n50\n1\n1\n1\n",
+          "expected_output": ".+",
+          "points": 2,
+          "type": "branch"
+        },
+        {
+          "label": "moderate temperature, moderate pressure",
+          "inputs": "base\n100\n5\n1\n1\n1\n",
+          "expected_output": ".+",
+          "points": 2,
+          "type": "branch"
+        },
+        {
+          "label": "non-numeric temperature",
+          "inputs": "acid\nabc\n1\n1\n1\n1\n",
+          "expected_output": "error|invalid|number|digit|must|enter.*valid|not.*number",
+          "points": 2,
+          "type": "validation"
+        }
+      ]
+    },
+    "Survey Classifier": {
+      "content_checks": [
+        {
+          "field": "I/P/O comment block",
+          "regexes": [
+            "'''[\\s\\S]*inputs[\\s\\S]*processes[\\s\\S]*outputs[\\s\\S]*'''",
+            "\"\"\"[\\s\\S]*inputs[\\s\\S]*processes[\\s\\S]*outputs[\\s\\S]*\"\"\""
+          ],
+          "points": 3
+        }
+      ],
+      "test_cases": [
+        {
+          "label": "score 10 (promoter)",
+          "inputs": "Customer Survey\n10\n1\n1\n1\n1\n",
+          "expected_output": "promoter",
+          "points": 2,
+          "type": "branch"
+        },
+        {
+          "label": "score 5 (detractor)",
+          "inputs": "Customer Survey\n5\n1\n1\n1\n1\n",
+          "expected_output": "detractor",
+          "points": 2,
+          "type": "branch"
+        },
+        {
+          "label": "score 8 (passive)",
+          "inputs": "Customer Survey\n8\n1\n1\n1\n1\n",
+          "expected_output": "passive",
+          "points": 2,
+          "type": "branch"
+        },
+        {
+          "label": "score out of range (15)",
+          "inputs": "Customer Survey\n15\n1\n1\n1\n1\n",
+          "expected_output": "error|invalid|range|between|must|0.*10|out.*range",
+          "points": 2,
+          "type": "validation"
+        }
+      ]
+    },
+    "Shipping Calculator": {
+      "content_checks": [
+        {
+          "field": "I/P/O comment block",
+          "regexes": [
+            "'''[\\s\\S]*inputs[\\s\\S]*processes[\\s\\S]*outputs[\\s\\S]*'''",
+            "\"\"\"[\\s\\S]*inputs[\\s\\S]*processes[\\s\\S]*outputs[\\s\\S]*\"\"\""
+          ],
+          "points": 3
+        }
+      ],
+      "test_cases": [
+        {
+          "label": "light package, local zone",
+          "inputs": "Maria\n1.5\nlocal\n1\n1\n1\n",
+          "expected_output": "\\$[\\d.]+",
+          "points": 2,
+          "type": "branch"
+        },
+        {
+          "label": "medium package, regional zone",
+          "inputs": "Maria\n5.5\nregional\n1\n1\n1\n",
+          "expected_output": "\\$[\\d.]+",
+          "points": 2,
+          "type": "branch"
+        },
+        {
+          "label": "heavy package, national zone",
+          "inputs": "Maria\n15\nnational\n1\n1\n1\n",
+          "expected_output": "\\$[\\d.]+",
+          "points": 2,
+          "type": "branch"
+        },
+        {
+          "label": "negative weight",
+          "inputs": "Maria\n-3\nlocal\n1\n1\n1\n",
+          "expected_output": "error|invalid|positive|negative|must|cannot|greater",
+          "points": 2,
+          "type": "validation"
+        }
+      ]
+    },
+    "Meal Recommender": {
+      "content_checks": [
+        {
+          "field": "I/P/O comment block",
+          "regexes": [
+            "'''[\\s\\S]*inputs[\\s\\S]*processes[\\s\\S]*outputs[\\s\\S]*'''",
+            "\"\"\"[\\s\\S]*inputs[\\s\\S]*processes[\\s\\S]*outputs[\\s\\S]*\"\"\""
+          ],
+          "points": 3
+        }
+      ],
+      "test_cases": [
+        {
+          "label": "breakfast, vegetarian, low budget",
+          "inputs": "breakfast\nvegetarian\nlow\n1\n1\n1\n",
+          "expected_output": ".+",
+          "points": 2,
+          "type": "branch"
+        },
+        {
+          "label": "dinner, none, high budget",
+          "inputs": "dinner\nnone\nhigh\n1\n1\n1\n",
+          "expected_output": ".+",
+          "points": 2,
+          "type": "branch"
+        },
+        {
+          "label": "lunch, vegan, medium budget",
+          "inputs": "lunch\nvegan\nmedium\n1\n1\n1\n",
+          "expected_output": ".+",
+          "points": 2,
+          "type": "branch"
+        },
+        {
+          "label": "invalid meal time",
+          "inputs": "midnight\nvegetarian\nlow\n1\n1\n1\n",
+          "expected_output": "error|invalid|not.*valid|unrecognized|choose|must",
+          "points": 2,
+          "type": "validation"
+        }
+      ]
+    }
+  }
+}
