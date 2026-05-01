@@ -22,8 +22,6 @@ Outputs:
 - Print error message if any input is invalid
 '''
 
-print("Welcome to the Quest Recommender!")
-
 #Input: Get player information
 player_name = input("Enter your name: ")
 player_level = int(input("Enter your level (1-35): "))
