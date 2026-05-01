@@ -33,7 +33,7 @@ else:
     else:
         #Process: Determine access level
         if user_role == "admin":
-               access_level = "full access (lvl 5 clearance)"
+            access_level = "full access (lvl 5 clearance)"
         elif user_role == "employee":
             if current_time == "open":
                 access_level = "partial access (lvl 3 clearance)"
