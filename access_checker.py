@@ -46,4 +46,4 @@ else:
                 access_level = "no access"
         #Output: Print access level
         print(f"{user_name}, as the museum is {current_time} and you are a {user_role}, your current access level is: {access_level}.")
-        
+#END        
